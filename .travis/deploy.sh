@@ -5,6 +5,7 @@ set -xe
 
 if [ $TRAVIS_BRANCH == "master" ] ; then
 	echo "deploying"
+	echo $(pwd)
     # setup ssh agent, git config and remote
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/travis_rsa
