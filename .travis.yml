@@ -7,8 +7,13 @@ before_install:
   -in travis_rsa.enc -out ~/.ssh/travis_rsa -d
 - docker build -t alexchomiak/docker-react -f Dockerfile.dev .
 - chmod 600 ~/.ssh/travis_rsa
+
+before_deploy:
+  - echo -e "Host ssh-proxy.chom.es\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
+  - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 script:
 - docker run alexchomiak/docker-react npm run test -- --coverage
+
 
 deploy:
   skip_cleanup: true
