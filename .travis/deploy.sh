@@ -11,7 +11,7 @@ if [ $TRAVIS_BRANCH == "master" ] ; then
     ssh-add ~/.ssh/travis_rsa
 	git config --global push.default matching
     git remote add deploy "travis@ssh-proxy.chom.es:docker-react"
-	git push -f deploy HEAD:master
+	git push -f deploy master 
 else   	
 	echo "oof"
 fi
