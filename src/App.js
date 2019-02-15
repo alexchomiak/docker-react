@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            oooof this was pushed by travisCI........
+            AJAX
           </a>
         </header>
       </div>
