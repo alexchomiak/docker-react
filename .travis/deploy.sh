@@ -14,7 +14,7 @@ if [ $TRAVIS_BRANCH == "master" ] ; then
 	git push -f deploy master 
 
 
-	ssh -i ~/.ssh/travis_rsa travis@ssh-proxy.chom.es < run_container.sh
+	ssh -i ~/.ssh/travis_rsa travis@ssh-proxy.chom.es < ./run_container.sh
 	
 	
 else   	
