@@ -1,5 +1,6 @@
 cd /home/travis/docker-react
 pwd
-docker stop alexchomiak/docker-react
-docker build -t alexchomiak/docker-react .
-docker run -p 5678:80 alexchomiak/docker-react
+docker stop $(docker ps -q --filter ancestor=dockerreactprod )
+docker build -t dockerreactprod .
+docker run -p 5678:80 dockerreactprod
+echo "started"
