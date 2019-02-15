@@ -13,8 +13,8 @@ if [ $TRAVIS_BRANCH == "master" ] ; then
     git remote add deploy "travis@ssh-proxy.chom.es:docker-react"
 	git push -f deploy master 
 
-
-	ssh -i ~/.ssh/travis_rsa travis@ssh-proxy.chom.es < ./run_container.sh
+	pwd
+	ssh -i ~/.ssh/travis_rsa travis@ssh-proxy.chom.es < ./.travis/run_container.sh
 	
 	
 else   	
