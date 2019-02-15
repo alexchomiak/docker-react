@@ -14,11 +14,8 @@ if [ $TRAVIS_BRANCH == "master" ] ; then
 	git push -f deploy master 
 
 
-	ssh travis@ssh-proxy.chom.es
-	cd /home/travis/docker-react
-	docker stop alexchomiak/docker-react
-	docker build -t alexchomiak/docker-react .
-	docker run -p 5678:80 alexchomiak/docker-react
+	ssh -i ~/.ssh/travis_rsa travis@ssh-proxy.chom.es < run_container.sh
+	
 	
 else   	
 	echo "oof"
