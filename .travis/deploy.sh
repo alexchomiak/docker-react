@@ -15,7 +15,7 @@ if [ $TRAVIS_BRANCH == "master" ] ; then
 
 	pwd
 	ssh -tt -i ~/.ssh/travis_rsa travis@ssh-proxy.chom.es < ./.travis/run_container.sh
-	
+	echo "done"
 	
 else   	
 	echo "oof"
