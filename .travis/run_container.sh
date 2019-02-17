@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/travis/docker-react
+cd /home/travis/docker-reimact
 npm i
 npm run build
 docker stop $(docker ps -q --filter ancestor=dockerreactprod )

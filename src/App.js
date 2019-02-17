@@ -17,7 +17,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            AJAX
+            Fuck you mike
           </a>
         </header>
       </div>
